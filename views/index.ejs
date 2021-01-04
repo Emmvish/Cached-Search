@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Search a URL</title>
+    </head>
+    <body>
+        <form>
+            <label id="url">Enter Tags</label>
+            <input type="text" id="url"></input>
+            <button>Submit</button>
+        </form>
+        <p>
+        <ul>
+            <% urlList.forEach(function(item){%>
+            <li><%=item%></li>
+            <% )};%>
+        </ul>
+        </p> 
+        <script>
+            const queryForm = document.querySelector("form")
+            const search = document.querySelector("input")
+            const message = document.querySelector("li")
+            queryForm.addEventListener("submit",(event)=>{
+            event.preventDefault()
+            const url = "/enlist?tags=" + search.value;
+            console.log(url)
+            fetch(url).then((response)=>{
+                {{!-- response.json().then((data)=>{
+                         message.textContent = data.urlList
+                }) --}}
+    });
+})
+        </script>
+    </body>
+</html>

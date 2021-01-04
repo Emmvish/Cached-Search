@@ -1,0 +1,1 @@
+A search engine to conduct searches among 20-30 documents that were uploaded on a website, with limited caching abilities and query analysis incorporated. Created this project using Node.js.
